@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Employee Management</h1>
+
+    <!-- Form to add or update employee details -->
+    <form id="employeeForm">
+        <input type="hidden" id="eId">  <!-- Hidden field for employee ID -->
+    
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" required>
+    
+        <label for="blood">Blood Group:</label>
+        <input type="text" id="blood" name="blood" required>
+    
+        <label for="phoneNum">Phone Number:</label>
+        <input type="number" id="phoneNum" name="phoneNum" required>
+    
+        <label for="sal">Salary:</label>
+        <input type="number" id="sal" name="sal" required>
+    
+        <h4>Address</h4>
+        <label for="d_No">Door Number:</label>
+        <input type="text" id="d_No" name="d_No" required>
+    
+        <label for="streetName">Street Name:</label>
+        <input type="text" id="streetName" name="streetName" required>
+    
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+    
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district" required>
+    
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required>
+    
+        <label for="pinCode">Pincode:</label>
+        <input type="number" id="pinCode" name="pinCode" requires>
+    
+        <button type="submit">Save Employee</button>
+        <button type="button" onclick="clearForm()">Reset</button>
+    </form>
+
+    <!-- Table to display all employees -->
+    <h2>Employee List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Blood Group</th>
+                <th>Phone Number</th>
+                <th>Salary</th>
+                <th>Address</th>
+                <th >Actions</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTableBody">
+            <!-- Data from backend will be inserted here -->
+        </tbody>
+    </table>
+
+    <script src="work.js"></script>
+</body>
+</html>
